@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artur Murzakamalov | Private Advisory</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAV -->
     <nav class="navbar">
         <div class="logo">A.M.</div>
         <ul class="nav-links">
@@ -21,7 +18,6 @@
         </ul>
     </nav>
 
-    <!-- HERO -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>ARTUR<br>MURZAKAMALOV</h1>
@@ -31,36 +27,26 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="section" id="about">
         <div class="container grid-2">
             <div class="about-text">
                 <h2>Архитектура доверия</h2>
                 <p>Стратегический консалтинг в сфере цифровых активов и IT-инфраструктуры. Строгий подход к управлению рисками и построению архитектурных решений для частных клиентов и институтов.</p>
-                <p>Минимализм, ясность и отсутствие лишних слоев. Каждое решение — часть единой конструкции.</p>
             </div>
-            <div class="about-image">
-                <div class="img-placeholder">
-                    <span>PORTRAIT</span>
-                </div>
-            </div>
+            <div class="about-image"><div class="img-placeholder"><span>PORTRAIT</span></div></div>
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
     <section class="section bg-darker" id="portfolio">
         <div class="container">
             <h2>Портфолио</h2>
             <div class="portfolio-grid">
                 <div class="card"><h3>DeFi Architecture</h3><p>Проектирование протоколов ликвидности и аудит смарт-контрактов.</p></div>
                 <div class="card"><h3>Custody Solutions</h3><p>Разработка безопасных хранилищ с разделением ключей.</p></div>
-                <div class="card"><h3>Security Audit</h3><p>Комплексный анализ инфраструктуры и поиск уязвимостей.</p></div>
-                <div class="card"><h3>Tokenomics</h3><p>Математическое моделирование экономики токенов.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- NEWS & ADS -->
     <section class="section" id="news">
         <div class="container grid-2">
             <div>
@@ -69,47 +55,40 @@
             </div>
             <div>
                 <h2>Партнеры</h2>
-                <div class="ad-banner">
-                    <span>МЕСТО ДЛЯ РЕКЛАМЫ</span>
-                    <p>Премиальное размещение баннеров</p>
-                </div>
+                <div class="ad-banner"><span>МЕСТО ДЛЯ РЕКЛАМЫ</span><p>Премиальное размещение</p></div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT (РАБОЧАЯ ФОРМА) -->
     <section class="section bg-darker" id="contact">
         <div class="container form-container">
             <h2>Обратная связь</h2>
-            <p style="text-align:center; margin-bottom: 30px;">Заполните форму, и сообщение придет мне на почту.</p>
-            <!-- ВАЖНО: Замени "твой_email@mail.com" на свою реальную почту! -->
-            <form action="https://formsubmit.co/tyrkadaud-ux@users.noreply.github.com" method="POST">
+            <!-- ВАЖНО: Замени ВАШ_ACCESS_KEY на ключ с web3forms.com -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="ВАШ_ACCESS_KEY">
                 <input type="text" name="name" placeholder="Ваше имя" required>
                 <input type="email" name="email" placeholder="Ваш Email" required>
                 <textarea name="message" placeholder="Сообщение" rows="4" required></textarea>
-                <!-- Скрытые настройки FormSubmit (чтобы не было капчи и редиректа) -->
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://tyrkadaud-ux.github.io/premium-site/">
                 <button type="submit" class="btn-main">Отправить</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Artur Murzakamalov. Private Advisory.</p>
-    </footer>
+    <footer><p>&copy; 2026 Artur Murzakamalov.</p></footer>
 
-    <!-- ЧАТ-ВИДЖЕТ (МЕНЮ СВЯЗИ) -->
-    <div class="chat-widget-container" id="chatWidget">
-        <div class="chat-menu" id="chatMenu">
-            <a href="https://t.me/your_telegram" target="_blank">Telegram</a>
-            <a href="https://wa.me/79999999999" target="_blank">WhatsApp</a>
-            <a href="mailto:tyrkadaud-ux@users.noreply.github.com">Email</a>
-        </div>
-        <div class="chat-btn" onclick="document.getElementById('chatMenu').classList.toggle('active')">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-        </div>
-    </div>
+    <!-- ЧАТ-ВИДЖЕТ TAWK.TO (Открывается в отдельном окне) -->
+    <!-- ВАЖНО: Замени ссылку ниже на свою с tawk.to -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/ВАШ_ID/1hxxxxxx';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
 
     <script src="js/main.js"></script>
 </body>

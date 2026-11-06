@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"><title>Admin Panel</title>
+    <style>
+        body { background: #050505; color: #fff; font-family: sans-serif; padding: 40px; max-width: 800px; margin: 0 auto; }
+        h1 { color: #C5A059; }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: #111; border: 1px solid #333; color: #fff; box-sizing: border-box;}
+        button { padding: 15px 30px; background: #C5A059; border: none; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .status { margin-top: 20px; color: #C5A059; }
+    </style>
+</head>
+<body>
+    <h1>Управление новостями (Скрытая)</h1>
+    <p>Введите ваш GitHub Токен. Он сохранится в этом браузере.</p>
+    <input type="password" id="token" placeholder="GitHub Token (ghp_...)">
+    <hr style="border-color:#333; margin: 30px 0;">
+    <h2>Добавить новость</h2>
+    <input type="text" id="title" placeholder="Заголовок">
+    <input type="text" id="date" placeholder="Дата (напр. Декабрь 2026)">
+    <textarea id="text" rows="4" placeholder="Текст новости"></textarea>
+    <button onclick="addNews()">Опубликовать на сайте</button>
+    <div class="status" id="status"></div>
+
+    <script>
+        document.getElementById('token').value = localStorage.getItem('gh_token') || '';
+        async function addNews() {
+            const token = document.getElementById('token').value;
+            if (!token) return alert('Введите токен!');
+            localStorage.setItem('gh_token', token);
+
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const text = document.getElementById('text').value;
+            if (!title || !date || !text) return alert('Заполните все поля!');
+
+            document.getElementById('status').innerText = "Отправка на GitHub...";
+
+            try {
+                const getRes = await fetch('https://api.github.com/repos/tyrkadaud-ux/premium-site/contents/news.json');
+                const getData = await getRes.json();
+                const currentNews = JSON.parse(decodeURIComponent(escape(atob(getData.content))));
+                
+                currentNews.unshift({ date, title, text });
+                const jsonStr = JSON.stringify(currentNews, null, 2);
+                const base64Content = btoa(unescape(encodeURIComponent(jsonStr)));
+
+                const putRes = await fetch('https://api.github.com/repos/tyrkadaud-ux/premium-site/contents/news.json', {
+                    method: 'PUT',
+                    headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: `Add news: ${title}`, content: base64Content, sha: getData.sha })
+                });
+
+                if (putRes.ok) {
+                    document.getElementById('status').innerText = "Успех! Новость появится на сайте через 1-2 минуты.";
+                    document.getElementById('title').value = '';
+                    document.getElementById('text').value = '';
+                } else {
+                    const err = await putRes.json();
+                    document.getElementById('status').innerText = "Ошибка: " + err.message;
+                }
+            } catch (e) { document.getElementById('status').innerText = "Ошибка: " + e.message; }
+        }
+    </script>
+</body>
+</html>
