@@ -1,147 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="color-scheme" content="dark">
-  <title>Artur Murzakamalov — Private Advisory</title>
-  <meta name="description" content="Strategic advisory in digital assets and infrastructure. Private practice.">
-  <meta property="og:title" content="Artur Murzakamalov — Private Advisory">
-  <meta property="og:description" content="Strategic advisory in digital assets and infrastructure.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#000000">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Cpath d='M16 48 L32 16 L48 48' fill='none' stroke='%23C5A059' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artur Murzakamalov | Private Advisory</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a href="#top" class="brand" aria-label="Artur Murzakamalov — на главную">
-        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-          <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1"/>
-          <path d="M20 44 L32 20 L44 44" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M24 38 L40 38" fill="none" stroke="currentColor" stroke-width="1"/>
-        </svg>
-        <span class="brand-text">A · M</span>
-      </a>
-      <nav class="nav" aria-label="Основная навигация">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Меню">
-          <span></span><span></span>
-        </button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#news">Новости</a></li>
-          <li><a href="#partners">Партнёры</a></li>
-          <li><a href="#contact">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-inner">
-        <svg class="hero-mark" viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="60" cy="60" r="58" fill="none" stroke="currentColor" stroke-width="0.6"/>
-          <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.5"/>
-          <path d="M34 82 L60 30 L86 82" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <path d="M44 68 L76 68" fill="none" stroke="currentColor" stroke-width="0.8"/>
-        </svg>
-        <h1 id="hero-title">ARTUR<br>MURZAKAMALOV</h1>
-        <div class="gold-line" aria-hidden="true"></div>
-        <p class="hero-sub">Private Capital &amp; Digital Assets Advisory</p>
-        <a class="hero-cta" href="#about">Enter</a>
-      </div>
-    </section>
-
-    <section class="section reveal" id="about">
-      <div class="container grid-2">
-        <div>
-          <span class="eyebrow">01 — Обо мне</span>
-          <h2>Архитектура доверия</h2>
-          <p>Стратегический консалтинг в сфере цифровых активов и IT-инфраструктуры. Строгий подход к управлению рисками и построению архитектурных решений для частных клиентов и институтов.</p>
-          <p class="muted">Принцип: минимализм, ясность, отсутствие лишних слоёв. Каждое решение — часть конструкции.</p>
-        </div>
-        <figure class="portrait">
-          <svg viewBox="0 0 400 500" role="img" aria-label="Архитектурный портрет-заглушка">
-            <defs>
-              <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" stop-color="#1a1a1a"/>
-                <stop offset="1" stop-color="#0d0d0d"/>
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="400" height="500" fill="url(#g)"/>
-            <line x1="20" y1="20" x2="380" y2="20" stroke="#C5A059" stroke-width="0.5" opacity="0.6"/>
-            <line x1="20" y1="480" x2="380" y2="480" stroke="#C5A059" stroke-width="0.5" opacity="0.6"/>
-            <text x="200" y="260" text-anchor="middle" fill="#C5A059" font-family="Georgia,serif" font-size="14" letter-spacing="6">PORTRAIT</text>
-          </svg>
-          <figcaption>Замените SVG на фотографию в архитектурной рамке.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section reveal" id="news">
-      <div class="container">
-        <span class="eyebrow">02 — Новости / Кейсы</span>
-        <h2>Последние события</h2>
-        <div id="news-list" class="news-list" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="partners">
-      <div class="container">
-        <span class="eyebrow">03 — Партнёры</span>
-        <h2>Рекламное место</h2>
-        <div class="ad-banner">
-          <span>Ваш бренд здесь</span>
-          <small>Размещение баннеров и партнёрских блоков</small>
-          <a href="#contact" class="ad-cta">Обсудить</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reveal" id="contact">
-      <div class="container">
-        <span class="eyebrow">04 — Контакты</span>
-        <h2>Связаться</h2>
-        <p>Для частных запросов и партнёрства: <a href="mailto:contact@example.com">contact@example.com</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Artur Murzakamalov</p>
-      <ul class="footer-links">
-        <li><a href="#" rel="noopener">Telegram</a></li>
-        <li><a href="#" rel="noopener">LinkedIn</a></li>
-        <li><a href="#" rel="noopener">GitHub</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script>
-    window.__FALLBACK_NEWS__ = [
-      { "date": "2026-11", "tag": "Audit",     "title": "Аудит инфраструктуры крипто-проекта", "text": "Выявлены и устранены системные риски цепочки поставок." },
-      { "date": "2026-10", "tag": "Advisory",  "title": "Архитектура кастодиального решения",  "text": "Спроектировано хранилище с разделением ключей и политикой подписи." },
-      { "date": "2026-09", "tag": "Research",  "title": "Исследование race conditions в TON",   "text": "Подготовлена методология симуляции переупорядочивания сообщений." }
-    ];
-  </script>
-  <script src="js/main.js" defer></script>
-
-  <!-- Chat widget (Tawk.to). Раскомментируйте и подставьте свой ID.
-  <script>
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/ВАШ_ID/1hxxxxxx';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  -->
+    <header><h1>ARTUR MURZAKAMALOV</h1></header>
+    <main>
+        <section class="hero">
+            <h2>Private Capital & Digital Assets Advisory</h2>
+            <div class="gold-line"></div>
+            <p>Стратегический консалтинг в сфере цифровых активов и IT-инфраструктуры.</p>
+        </section>
+        <section class="content">
+            <h3>Обо мне</h3>
+            <p>Строгий подход к управлению рисками и построению архитектурных решений для частных клиентов и институтов.</p>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 Artur Murzakamalov. All rights reserved.</p></footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
