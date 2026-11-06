@@ -1,95 +1,140 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artur Murzakamalov | Private Advisory</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --bg-color: #0D0D0D;
+            --text-color: #FFFFFF;
+            --gold-accent: #C5A059;
+            --secondary-text: #A0A0A0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .gold-line {
+            width: 80px;
+            height: 2px;
+            background-color: var(--gold-accent);
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+            max-width: 600px;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        /* Section Styling */
+        .section { padding: 100px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .section h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--gold-accent); font-weight: normal; }
+        .section p { font-family: 'Arial', sans-serif; color: var(--secondary-text); font-size: 1.1rem; max-width: 800px; }
+        
+        /* Ad Placeholder */
+        .ad-banner {
+            border: 2px dashed var(--gold-accent);
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            background: rgba(197, 160, 89, 0.05);
+            color: var(--gold-accent);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Footer */
+        footer { padding: 50px 0; text-align: center; font-family: 'Arial', sans-serif; font-size: 0.9rem; color: var(--secondary-text); }
+        footer a { color: var(--gold-accent); text-decoration: none; }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">A.M.</div>
-        <ul class="nav-links">
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#portfolio">Портфолио</a></li>
-            <li><a href="#news">Новости</a></li>
-            <li><a href="#contact" class="btn-nav">Связаться</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>ARTUR<br>MURZAKAMALOV</h1>
-            <div class="gold-line"></div>
-            <p class="subtitle">Private Capital & Digital Assets Advisory</p>
-            <a href="#about" class="btn-main">Узнать больше</a>
-        </div>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>ARTUR MURZAKAMALOV</h1>
+        <div class="gold-line"></div>
+        <p>Private Capital & Digital Assets Advisory</p>
     </section>
 
-    <section class="section" id="about">
-        <div class="container grid-2">
-            <div class="about-text">
-                <h2>Архитектура доверия</h2>
-                <p>Стратегический консалтинг в сфере цифровых активов и IT-инфраструктуры. Строгий подход к управлению рисками и построению архитектурных решений для частных клиентов и институтов.</p>
-            </div>
-            <div class="about-image"><div class="img-placeholder"><span>PORTRAIT</span></div></div>
-        </div>
-    </section>
-
-    <section class="section bg-darker" id="portfolio">
+    <!-- ABOUT -->
+    <section class="section">
         <div class="container">
-            <h2>Портфолио</h2>
-            <div class="portfolio-grid">
-                <div class="card"><h3>DeFi Architecture</h3><p>Проектирование протоколов ликвидности и аудит смарт-контрактов.</p></div>
-                <div class="card"><h3>Custody Solutions</h3><p>Разработка безопасных хранилищ с разделением ключей.</p></div>
+            <h2>Обо мне</h2>
+            <p>Стратегический консалтинг в сфере цифровых активов и IT-инфраструктуры. Строгий подход к управлению рисками и построению архитектурных решений.</p>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section">
+        <div class="container">
+            <h2>Новости и Кейсы</h2>
+            <div style="background: #1A1A1A; padding: 30px; border-left: 3px solid var(--gold-accent); margin-bottom: 20px;">
+                <p style="color: white; margin-bottom: 10px;"><strong>Ноябрь 2026</strong></p>
+                <p>Завершен аудит безопасности инфраструктуры крупного крипто-проекта. Выявлены и устранены системные риски цепочки поставок.</p>
             </div>
         </div>
     </section>
 
-    <section class="section" id="news">
-        <div class="container grid-2">
-            <div>
-                <h2>Инсайды</h2>
-                <div id="news-container"></div>
-            </div>
-            <div>
-                <h2>Партнеры</h2>
-                <div class="ad-banner"><span>МЕСТО ДЛЯ РЕКЛАМЫ</span><p>Премиальное размещение</p></div>
+    <!-- ADVERTISING -->
+    <section class="section">
+        <div class="container">
+            <h2>Партнеры</h2>
+            <div class="ad-banner">
+                МЕСТО ДЛЯ ВАШЕЙ РЕКЛАМЫ<br><span style="font-size: 0.8rem; opacity: 0.7;">Свяжитесь для размещения</span>
             </div>
         </div>
     </section>
 
-    <section class="section bg-darker" id="contact">
-        <div class="container form-container">
-            <h2>Обратная связь</h2>
-            <!-- ВАЖНО: Замени ВАШ_ACCESS_KEY на ключ с web3forms.com -->
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="ВАШ_ACCESS_KEY">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваш Email" required>
-                <textarea name="message" placeholder="Сообщение" rows="4" required></textarea>
-                <button type="submit" class="btn-main">Отправить</button>
-            </form>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Artur Murzakamalov. All rights reserved.</p>
+            <p style="margin-top: 10px;">Email: contact@example.com</p>
         </div>
-    </section>
+    </footer>
 
-    <footer><p>&copy; 2026 Artur Murzakamalov.</p></footer>
-
-    <!-- ЧАТ-ВИДЖЕТ TAWK.TO (Открывается в отдельном окне) -->
-    <!-- ВАЖНО: Замени ссылку ниже на свою с tawk.to -->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/ВАШ_ID/1hxxxxxx';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <!-- CHAT WIDGET PLACEHOLDER -->
+    <!-- Здесь будет код виджета Tawk.to или Crisp -->
+    <script>
+        // Пример для Tawk.to (раскомментировать и заменить ID)
+        /*
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/ВАШ_ID/1hxxxxxx';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        */
     </script>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
